@@ -24,10 +24,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
+  <!--[if lt IE 9]>-->
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+  <!--[endif]-->
 
   <!-- Google Font -->
   <link rel="stylesheet"
@@ -97,23 +97,26 @@ desired effect
                 </div>
             <!-- /.box-header -->
             <!-- form start -->
-                <form role="form">
+                <form role="form" method="POST" action="/detailAction">
                 <div class="box-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Id Tiket</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukan Id" name="id_tiket">
-                    <label for="exampleInputEmail1">Harga</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukan Harga" name="harga">
-                    <label for="exampleInputEmail1">Tujuan</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukan Tujuan" name="tujuan">
-                    <label for="exampleInputEmail1">Kode Tiket</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukan Kode" name="kode_tiket">
+
+                    {{csrf_field()}}
+
+                    <label for="in_id">Id Tiket</label>
+                    <input type="text" class="form-control" id="in_id" placeholder="Masukan Id" name="id_tiket">
+                    <label for="in_harga">Harga</label>
+                    <input type="text" class="form-control" id="in_harga" placeholder="Masukan Harga" name="harga">
+                    <label for="in_tujuan">Tujuan</label>
+                    <input type="text" class="form-control" id="in_tujuan" placeholder="Masukan Tujuan" name="tujuan">
+                    <label for="in_kode">Kode Tiket</label>
+                    <input type="text" class="form-control" id="in_kode" placeholder="Masukan Kode" name="kode_tiket">
                   </div>
                 
                 <!-- /.box-body -->
 
                   <div class="box-footer">
-                    <button type="submit" class="btn btn-primary" name="btn_submit">Submit</button>
+                    <input type="submit" class="btn btn-primary" name="btn_submit" value="Submit"></input>
                   </div>
                 </div>
                 </form>
@@ -122,30 +125,29 @@ desired effect
 
             <h1>Detail Tiket</h1>
 
-            
-
             <br>
             <br>
 
             <div class="box-body">
-            <table id="example2" class="table table-bordered table-hover">
+            <table id="example2" class="table table-striped table-bordered table-hover">
                 <tr>
                   <th>Id_tiket</th>
                   <th>Harga</th>
                   <th>Tujuan</th>
                   <th>Kode_Tiket</th>
+                  <th>Action</th>
                 </tr>
                 
                   @foreach($tb_detail as $d)
                   <tr>
-                    <td>{{ $d->id_tiket }}</td>
+                    <td>{{ $d->id_tiket }}</td> 
                     <td>{{ $d->harga }}</td>
                     <td>{{ $d->tujuan }}</td>
                     <td>{{ $d->kode_tiket}}</td>
                     <td>
-                      <a href="/detail/edit{{ $d->id_tiket }}">Edit</a>
-                      |
-                      <a href="/detail/hapus{{ $d->id_tiket }}">Hapus</a>
+                      <a href="/admin/detail/edit/{{ $d->id_tiket }}">Edit</a>
+                      &nbsp;|&nbsp;
+                      <a href="/admin/hapus/{{ $d->id_tiket }}">Hapus</a>
                     </td>
                   </tr>
                   @endforeach

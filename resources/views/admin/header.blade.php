@@ -4,9 +4,9 @@
     <!-- Logo -->
     <a href="index.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>T</b>PR</span>
+      <span class="logo-mini"><b>G</b>O</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Ticketing</b>PRO</span>
+      <span class="logo-lg"><b>Goodwill</b> ONLINE</span>
     </a>
 
     <!-- Header Navbar -->

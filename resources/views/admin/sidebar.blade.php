@@ -9,7 +9,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>Dani Yuliastri</p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
@@ -29,10 +29,17 @@
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">HEADER</li>
+        <li class="header">CONTROL PANEL</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+        <li><a href="/admin/pegawai"><i class="fa fa-users"></i> <span>Pegawai</span></a></li>
+        <li><a href="/admin/bus"><i class="fa fa-bus"></i> <span>Bus</span></a></li>
+        <li><a href="#"><i class="fa fa-ticket"></i> <span>Tiket</span></a></li>
+        <li><a href="/admin/detail"><i class="fa fa-list-ul"></i> <span>Detail Tiket</span></a></li>
+        <li><a href="#"><i class="fa fa-user"></i> <span>Penumpang</span></a></li>
+        <li><a href="#"><i class="fa fa-road"></i> <span>Perjalanan</span></a></li>
+
+        <!--Multilevel Links-->
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
             <span class="pull-right-container">
@@ -44,6 +51,7 @@
             <li><a href="#">Link in level 2</a></li>
           </ul>
         </li>
+        <!--End of Multilevel links-->
       </ul>
       <!-- /.sidebar-menu -->
     </section>
