@@ -42,7 +42,7 @@ class DetailtiketController extends Controller
     //mengirim data ke view content-detail
     return view('admin/content', ['tb_detail' => $tb_detail]);
     
-    // End of Query di Controller
+    // End of Query di Controller test test
     //
     */
 	}
