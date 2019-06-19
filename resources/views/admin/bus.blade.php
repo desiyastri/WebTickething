@@ -97,14 +97,14 @@ desired effect
                 </div>
             <!-- /.box-header -->
             <!-- form start -->
-                <form role="form" method="POST" action="/detailAction">
+                <form role="form" method="POST" action="/busAction">
                 <div class="box-body">
                   <div class="form-group">
 
                     {{csrf_field()}}
 
                     <label for="in_id">No Polisi</label>
-                    <input type="text" class="form-control" id="in_nopolis" placeholder="Masukan No Polisi" name="no_kk">
+                    <input type="text" class="form-control" id="in_nopolis" placeholder="Masukan No Polisi" name="no_polisi">
                     <label for="in_harga">Merk Mesin</label>
                     <input type="text" class="form-control" id="in_merk" placeholder="Masukan Merk" name="merk_mesin">
                     <label for="in_tujuan">Status Bus</label>
@@ -145,7 +145,7 @@ desired effect
                     <td>{{ $d->status_bus }}</td>
                     <td>{{ $d->nama_bus}}</td>
                     <td>
-                      <a href="/admin/detail/edit/{{ $d->no_polisi }}">Edit</a>
+                      <a href="/admin/edit/{{ $d->no_polisi }}">Edit</a>
                       &nbsp;|&nbsp;
                       <a href="/admin/hapus/{{ $d->no_polisi }}">Hapus</a>
                     </td>

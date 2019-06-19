@@ -147,7 +147,7 @@ desired effect
                     <td>
                       <a href="/admin/detail/edit/{{ $d->id_tiket }}">Edit</a>
                       &nbsp;|&nbsp;
-                      <a href="/admin/hapus/{{ $d->id_tiket }}">Hapus</a>
+                      <a href="/admin/detail/hapus/{{ $d->id_tiket }}">Hapus</a>
                     </td>
                   </tr>
                   @endforeach

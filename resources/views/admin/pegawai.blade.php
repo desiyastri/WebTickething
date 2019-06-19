@@ -156,9 +156,9 @@ desired effect
                     <td>{{ $p->no_telp}}</td>
                     <td>{{ $p->pekerjaan}}</td>
                     <td>
-                      <a href="/detail/edit{{ $p->id_pegawai }}">Edit</a>
+                      <a href="/admin/pegawai/edit{{ $p->id_pegawai }}">Edit</a>
                       |
-                      <a href="/detail/hapus{{ $p->id_pegawai }}">Hapus</a>
+                      <a href="/admin/pegawai/hapus{{ $p->id_pegawai }}">Hapus</a>
                     </td>
                   </tr>
                   @endforeach

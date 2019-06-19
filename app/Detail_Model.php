@@ -39,7 +39,7 @@ class Detail_Model extends Model
     {
 
         DB::table('tb_detail')->where('id_tiket',$request->id)->update([
-            'id_tiket'=>$request->id_tiket, 
+            'id_tiket'=>$request->id_tiket,
             'harga'=>$request->harga, 
             'tujuan'=>$request->tujuan, 
             'kode_tiket'=>$request->kode_tiket
