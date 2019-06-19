@@ -30,4 +30,18 @@ class BusController extends Controller
 
 		return redirect('/admin/bus');
 	}
+
+	public function edit_Bus($id)
+	{
+	 	$tb_bus = DB::table('tb_bus')->where('no_polisi',$id)->get();
+
+	 	return view('/admin/edit_Bus', ['tb_bus' => $tb_bus]);
+	}
+
+	public function bus_Update(Request $request){
+
+		Bus_Model::bus_update($request);
+
+        return redirect('/admin/bus');
+	}
 }

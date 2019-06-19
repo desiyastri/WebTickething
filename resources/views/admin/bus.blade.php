@@ -145,9 +145,9 @@ desired effect
                     <td>{{ $d->status_bus }}</td>
                     <td>{{ $d->nama_bus}}</td>
                     <td>
-                      <a href="/admin/edit/{{ $d->no_polisi }}">Edit</a>
+                      <a href="/admin/bus/edit/{{ $d->no_polisi }}">Edit</a>
                       &nbsp;|&nbsp;
-                      <a href="/admin/hapus/{{ $d->no_polisi }}">Hapus</a>
+                      <a href="/admin/bus/hapus/{{ $d->no_polisi }}">Hapus</a>
                     </td>
                   </tr>
                   @endforeach

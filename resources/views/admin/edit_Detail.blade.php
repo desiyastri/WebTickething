@@ -105,7 +105,7 @@ desired effect
                     {{csrf_field()}}
 
                     <label for="in_id">Id Tiket</label>
-                    <input type="text" class="form-control" id="in_id" placeholder="Masukan Id" name="id_tiket" value="{{ $d->id_tiket }}">
+                    <input type="text" class="form-control" id="in_id" placeholder="Masukan Id" name="id_tiket" value="{{ $d->id_tiket }}" disabled="true">
                     <label for="in_harga">Harga</label>
                     <input type="text" class="form-control" id="in_harga" placeholder="Masukan Harga" name="harga" value="{{ $d->harga }}">
                     <label for="in_tujuan">Tujuan</label>

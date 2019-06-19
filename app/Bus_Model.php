@@ -32,4 +32,15 @@ class Bus_Model extends Model
     	DB::table('tb_bus')->where('no_polisi',$id)->delete();
 
     }
+
+    public static function bus_update($request)
+    {
+ 
+        DB::table('tb_bus')->where('no_polisi',$request->no_polisi)->update([
+            'no_polisi'=>$request->no_polisi,
+            'merk_mesin'=>$request->merk_mesin, 
+            'status_bus'=>$request->status_bus, 
+            'nama_bus'=>$request->nama_bus 
+        ]);
+    }
 }

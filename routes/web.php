@@ -20,7 +20,7 @@ Route::get('/admin/detail', 'DetailtiketController@detail');
 
 Route::post('/detailAction','DetailtiketController@add_Detail');
 
-Route::get('/admin/detaill/hapus/{id}','DetailtiketController@delete_Detail');
+Route::get('/admin/detail/hapus/{id}','DetailtiketController@delete_Detail');
 
 Route::get('/admin/detail/edit/{id}','DetailtiketController@edit_Detail');
 
@@ -39,6 +39,10 @@ Route::get('/admin/bus', 'BusController@bus');
 Route::post('/busAction', 'BusController@add_Bus');
 
 Route::get('/admin/bus/hapus/{id}', 'BusController@delete_Bus');
+
+Route::get('/admin/bus/edit/{id}','BusController@edit_Bus');
+
+Route::post('/admin/bus/update','BusController@bus_Update');
 
 //Route tiket
 Route::get('/admin/tiket', 'TiketController@tiket');
